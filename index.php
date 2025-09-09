@@ -20,7 +20,7 @@
 
 <body>
     <!-- Widget Background Particles JS -->
-    <div id="particles-js"></div>
+    <canvas id="particles-js"></canvas>
 
     <div class="page-wrapper">
 
@@ -50,18 +50,18 @@
         // Data Aplikasi
         $applications = [
             ['name' => 'Website', 'url' => 'https://pn-lubukpakam.go.id/', 'icon' => 'fa-globe'],
-            ['name' => 'SAKTI KemenKeu', 'url' => 'https://sakti.kemenkeu.go.id/', 'icon' => 'fa-money-bill'],
             ['name' => 'SIPP 6.0.0', 'url' => 'http://192.168.1.147/SIPP330', 'icon' => 'fa-scale-balanced'],
             ['name' => 'MIS 6.0.0', 'url' => 'http://192.168.1.147/mis', 'icon' => 'fa-chart-pie'],
             ['name' => 'PTSP+ Lama', 'url' => 'http://192.168.1.147/ptsp', 'icon' => 'fa-desktop'],
             ['name' => 'PTSP+ Baru', 'url' => 'http://192.168.1.147/e-ptsp', 'icon' => 'fa-display'],
-            ['name' => 'SIWAKJON 3', 'url' => 'http://siwakjon3.local', 'icon' => 'fa-landmark'],
-            ['name' => 'SiSuper', 'url' => 'http://esurvey.badilum.mahkamahagung.go.id/', 'icon' => 'fa-star'],
-            ['name' => 'EIS Badilum', 'url' => 'https://evaluasi.badilum.mahkamahagung.go.id/', 'icon' => 'fa-chart-line'],
-            ['name' => 'Eraterang', 'url' => 'https://eraterang.badilum.mahkamahagung.go.id/masuk', 'icon' => 'fa-file-signature'],
             ['name' => 'E-Court', 'url' => 'https://ecourt.mahkamahagung.go.id/Login', 'icon' => 'fa-gavel'],
             ['name' => 'E-Berpadu', 'url' => 'https://eberpadu.mahkamahagung.go.id/', 'icon' => 'fa-users'],
             ['name' => 'E-SuKa', 'url' => 'https://www.e-suka.pn-lubukpakam.go.id/', 'icon' => 'fa-file-lines'],
+            ['name' => 'EIS Badilum', 'url' => 'https://evaluasi.badilum.mahkamahagung.go.id/', 'icon' => 'fa-chart-line'],
+            ['name' => 'SAKTI KemenKeu', 'url' => 'https://sakti.kemenkeu.go.id/', 'icon' => 'fa-money-bill'],
+            ['name' => 'SIWAKJON 3', 'url' => 'http://siwakjon3.local', 'icon' => 'fa-landmark'],
+            ['name' => 'SiSuper', 'url' => 'http://esurvey.badilum.mahkamahagung.go.id/', 'icon' => 'fa-star'],
+            ['name' => 'Eraterang', 'url' => 'https://eraterang.badilum.mahkamahagung.go.id/masuk', 'icon' => 'fa-file-signature'],
             ['name' => 'Direktori Putusan', 'url' => 'https://putusan3.mahkamahagung.go.id/', 'icon' => 'fa-book-bookmark'],
             ['name' => 'Perkusi', 'url' => 'https://eksekusi.badilum.mahkamahagung.go.id/', 'icon' => 'fa-hammer'],
             ['name' => 'SIWAS', 'url' => 'https://siwas.mahkamahagung.go.id/', 'icon' => 'fa-bullhorn'],
@@ -109,7 +109,7 @@
                                 <div class="card-body p-4">
                                     <h5 class="card-title text-muted mb-2">Peringkat Nasional</h5>
                                     <div class="d-flex align-items-baseline">
-                                        <h1 class="display-3 fw-bold me-2 text-primary"><?= $eisData['rank']; ?></h1>
+                                        <h1 class="display-3 fw-bold me-2 text-warning"><?= $eisData['rank']; ?></h1>
                                         <p class="mb-0">pada Kelas <?= $eisData['class']; ?> / Kategori <?= $eisData['category']; ?></p>
                                     </div>
                                 </div>
@@ -120,7 +120,7 @@
                                 <div class="card-body p-4">
                                     <h5 class="card-title text-muted mb-2">Total Poin Capaian</h5>
                                     <div class="d-flex align-items-baseline">
-                                        <h1 class="display-3 fw-bold text-primary"><?= htmlspecialchars($eisData['total']) ?></h1>
+                                        <h1 class="display-3 fw-bold text-warning"><?= $eisData['total']; ?></h1>
                                     </div>
                                     <p class="mb-0">Total poin dari 4 indikator EIS.</p>
                                 </div>
@@ -134,10 +134,10 @@
                             <div class="card portal-card h-100">
                                 <div class="card-body p-4 d-flex justify-content-between align-items-center">
                                     <div class="text-start">
-                                        <h2 class="fw-bold mb-1"><?= htmlspecialchars($eisData['performance']) ?></h2>
+                                        <h2 class="fw-bold mb-1"><?= $eisData['performance']; ?></h2>
                                         <span class="text-muted">Kinerja</span>
                                     </div>
-                                    <i class="fas fa-chart-line fa-3x text-primary opacity-25"></i>
+                                    <i class="fas fa-chart-line fa-3x text-warning opacity-25"></i>
                                 </div>
                             </div>
                         </div>
@@ -145,10 +145,10 @@
                             <div class="card portal-card h-100">
                                 <div class="card-body p-4 d-flex justify-content-between align-items-center">
                                     <div class="text-start">
-                                        <h2 class="fw-bold mb-1"><?= htmlspecialchars($eisData['compliance']) ?></h2>
+                                        <h2 class="fw-bold mb-1"><?= $eisData['compliance']; ?></h2>
                                         <span class="text-muted">Kepatuhan</span>
                                     </div>
-                                    <i class="fas fa-user-check fa-3x text-primary opacity-25"></i>
+                                    <i class="fas fa-user-check fa-3x text-warning opacity-25"></i>
                                 </div>
                             </div>
                         </div>
@@ -156,10 +156,10 @@
                             <div class="card portal-card h-100">
                                 <div class="card-body p-4 d-flex justify-content-between align-items-center">
                                     <div class="text-start">
-                                        <h2 class="fw-bold mb-1"><?= htmlspecialchars($eisData['completeness']) ?></h2>
+                                        <h2 class="fw-bold mb-1"><?= $eisData['completeness']; ?></h2>
                                         <span class="text-muted">Kelengkapan</span>
                                     </div>
-                                    <i class="fas fa-folder-open fa-3x text-primary opacity-25"></i>
+                                    <i class="fas fa-folder-open fa-3x text-warning opacity-25"></i>
                                 </div>
                             </div>
                         </div>
@@ -167,10 +167,10 @@
                             <div class="card portal-card h-100">
                                 <div class="card-body p-4 d-flex justify-content-between align-items-center">
                                     <div class="text-start">
-                                        <h2 class="fw-bold mb-1"><?= htmlspecialchars($eisData['conformity']) ?></h2>
+                                        <h2 class="fw-bold mb-1"><?= $eisData['conformity']; ?></h2>
                                         <span class="text-muted">Kesesuaian</span>
                                     </div>
-                                    <i class="fas fa-check-double fa-3x text-primary opacity-25"></i>
+                                    <i class="fas fa-check-double fa-3x text-warning opacity-25"></i>
                                 </div>
                             </div>
                         </div>
@@ -178,7 +178,7 @@
                 <?php else : ?>
                     <div class="alert alert-warning" role="alert">
                         <i class="fas fa-exclamation-triangle me-2"></i>
-                        <strong>Gagal Memuat Data EIS:</strong> <?= htmlspecialchars($eisData['info']) ?>
+                        <strong>Gagal Memuat Data EIS:</strong> <?= $eisData['info']; ?>
                     </div>
                 <?php endif; ?>
 
@@ -186,10 +186,10 @@
                 <div class="row g-4 justify-content-center">
                     <?php foreach ($applications as $app) : ?>
                         <div class="col-6 col-md-4 col-lg-3">
-                            <a target="_blank" href="<?= htmlspecialchars($app['url']) ?>" class="card portal-card h-100 text-decoration-none">
+                            <a target="_blank" href="<?= $app['url']; ?>" class="card portal-card h-100 text-decoration-none">
                                 <div class="card-body d-flex flex-column justify-content-center align-items-center p-4">
-                                    <i class="fas <?= htmlspecialchars($app['icon']) ?> fa-3x mb-3"></i>
-                                    <h5 class="card-title mb-0"><?= htmlspecialchars($app['name']) ?></h5>
+                                    <i class="fas <?= $app['icon']; ?> fa-3x mb-3 text-warning"></i>
+                                    <h5 class="card-title mb-0"><?= $app['name']; ?></h5>
                                 </div>
                             </a>
                         </div>
