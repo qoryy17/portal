@@ -109,8 +109,8 @@
                                 <div class="card-body p-4">
                                     <h5 class="card-title text-muted mb-2">Peringkat Nasional</h5>
                                     <div class="d-flex align-items-baseline">
-                                        <h1 class="display-3 fw-bold me-2 text-primary"><?= htmlspecialchars($eisData['rank']) ?></h1>
-                                        <p class="mb-0">pada Kelas <?= htmlspecialchars($eisData['class']) ?> / Kategori <?= htmlspecialchars($eisData['category']) ?></p>
+                                        <h1 class="display-3 fw-bold me-2 text-primary"><?= $eisData['rank']; ?></h1>
+                                        <p class="mb-0">pada Kelas <?= $eisData['class']; ?> / Kategori <?= $eisData['category']; ?></p>
                                     </div>
                                 </div>
                             </div>
