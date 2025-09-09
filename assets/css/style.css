@@ -1,102 +1,121 @@
+/* General Styling */
 body,
 html {
     margin: 0;
     padding: 0;
-    height: 100%;
-    background-color: white;
-    font-family: 'Segoe UI', sans-serif;
-    overflow: hidden;
+    /* height: 100%; This can cause layout issues with fixed elements. */
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #333;
 }
 
- /* Slider pengumuman */
- #pengumuman-slider {
+body {
+    min-height: 100vh;
+}
+/* Particles.js Background */
+#particles-js {
+    position: fixed;
     width: 100%;
-    /* background: #ffc107; */
-    color: #222;
+    height: 100%;
+    z-index: -1;
+}
+
+.page-wrapper {
+    position: relative;
+    z-index: 1; /* Ensures content is above the z-index: -1 particle background */
+}
+
+/* Announcement Ticker */
+#pengumuman-container {
+    background-color: rgba(33, 37, 41, 0.85); /* bs-dark with opacity */
+    backdrop-filter: blur(8px);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+    padding: 0.5rem 1rem;
     overflow: hidden;
     white-space: nowrap;
-    font-weight: bold;
-    /* border-bottom: 1px solid #ffc107; */
-    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-#pengumuman-slider .marquee {
+.ticker-wrap {
+    width: 100%;
+    overflow: hidden;
+}
+
+#pengumuman-slider {
     display: inline-block;
     padding-left: 100%;
-    animation: marquee 250s linear infinite;
+    animation: marquee 180s linear infinite;
 }
 
-#pengumuman-slider .marquee.paused {
+#pengumuman-slider:hover {
     animation-play-state: paused;
 }
 
 @keyframes marquee {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-100%);
-    }
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
 }
 
-#particles-js {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-}
-
+/* Main Content */
 .portal-container {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    padding-top: 60px;
+    padding-top: 100px; /* Space for announcement bar */
+    padding-bottom: 100px; /* Space for footer */
 }
 
 #jam-hari {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 500;
-    margin-bottom: 10px;
-    color: #333;
+    color: #495057; /* bs-gray-700 */
 }
 
-.btn-portal {
-    background-color: #c0bebe;
-    color: black;
-    font-weight: 500;
-    border-radius: 20px;
-    padding: 10px 30px;
-    margin: 10px;
-    transition: background-color 0.3s ease;
+#judul {
+    color: #212529; /* bs-dark */
 }
 
-.btn-portal:hover {
-    background-color: #ffc107;
+/* Portal Cards */
+.portal-card {
+    border: none;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    color: #343a40;
 }
 
-.blink {
-    animation: blink 1.5s infinite;
+.portal-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    background-color: rgba(255, 255, 255, 0.95);
 }
 
-@keyframes blink {
-
-    0%,
-    100% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0.3;
-    }
+.portal-card .card-title {
+    font-weight: 600;
 }
 
+.portal-card i {
+    color: #0d6efd; /* Bootstrap primary */
+    transition: transform 0.3s ease;
+}
+
+.portal-card:hover i {
+    transform: scale(1.1);
+}
+
+/* Footer */
 footer {
-    position: absolute;
-    bottom: 20px;
+    position: fixed;
+    bottom: 0;
     width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(5px);
+    padding: 1rem 0;
     text-align: center;
-    color: #333;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     z-index: 1;
+    border-top: 1px solid rgba(0,0,0,0.05);
 }
