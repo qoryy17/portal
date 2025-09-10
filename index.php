@@ -9,7 +9,7 @@
     <meta name="description" content="Portal Layanan Aplikasi">
     <title>Portal Sistem Pemerintahan Berbasis Elektronik (SPBE)</title>
     <!-- Favicon Logo -->
-    <link rel="shortcut icon" href="logo.png" type="image/png">
+    <link rel="shortcut icon" href="assets/images/logo.png" type="image/png">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Font Awesome -->
@@ -54,11 +54,12 @@
             ['name' => 'MIS 6.0.0', 'url' => 'http://192.168.1.147/mis', 'icon' => 'fa-chart-pie'],
             ['name' => 'PTSP+ Lama', 'url' => 'http://192.168.1.147/ptsp', 'icon' => 'fa-desktop'],
             ['name' => 'PTSP+ Baru', 'url' => 'http://192.168.1.147/e-ptsp', 'icon' => 'fa-display'],
+            ['name' => 'Cerdas', 'url' => 'http://192.168.1.147/cerdas', 'icon' => 'fa-display'],
             ['name' => 'E-Court', 'url' => 'https://ecourt.mahkamahagung.go.id/Login', 'icon' => 'fa-gavel'],
             ['name' => 'E-Berpadu', 'url' => 'https://eberpadu.mahkamahagung.go.id/', 'icon' => 'fa-users'],
             ['name' => 'E-SuKa', 'url' => 'https://www.e-suka.pn-lubukpakam.go.id/', 'icon' => 'fa-file-lines'],
             ['name' => 'EIS Badilum', 'url' => 'https://evaluasi.badilum.mahkamahagung.go.id/', 'icon' => 'fa-chart-line'],
-            ['name' => 'SAKTI KemenKeu', 'url' => 'https://sakti.kemenkeu.go.id/', 'icon' => 'fa-money-bill'],
+            ['name' => 'SAKTI', 'url' => 'https://sakti.kemenkeu.go.id/', 'icon' => 'fa-money-bill'],
             ['name' => 'SIWAKJON 3', 'url' => 'http://siwakjon3.local', 'icon' => 'fa-landmark'],
             ['name' => 'SiSuper', 'url' => 'http://esurvey.badilum.mahkamahagung.go.id/', 'icon' => 'fa-star'],
             ['name' => 'Eraterang', 'url' => 'https://eraterang.badilum.mahkamahagung.go.id/masuk', 'icon' => 'fa-file-signature'],
