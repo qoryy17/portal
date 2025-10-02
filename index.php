@@ -201,6 +201,20 @@
                         </div>
                     <?php endforeach; ?>
                 </div>
+
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="text-muted mt-5 mb-0">Terakhir diperbarui: 02 September 2025 08:00 WIB</p>
+                    </div>
+                    <div class="alert alert-warning mt-3" role="alert">
+                        <p class="mb-0 text-center">
+                            <i class="fas fa-info-circle me-2"></i>
+                            <strong>Catatan:</strong> Beberapa aplikasi mungkin hanya dapat diakses dari jaringan internal kantor. Silakan hubungi administrator sistem jika mengalami kesulitan akses.
+                            <br>
+                            Jika tidak terdapat aplikasi yang Anda cari, silakan hubungi Tim IT Pengadilan Negeri Lubuk Pakam.
+                        </p>
+                    </div>
+                </div>
             </div>
         </main>
 
