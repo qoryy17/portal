@@ -54,7 +54,7 @@
             ['name' => 'MIS 6.0.0', 'url' => 'http://192.168.1.147/mis', 'icon' => 'fa-chart-pie'],
             ['name' => 'EIS Badilum', 'url' => 'https://evaluasi.badilum.mahkamahagung.go.id/', 'icon' => 'fa-chart-line'],
             ['name' => 'PTSP+ Lama', 'url' => 'http://192.168.1.147/ptsp', 'icon' => 'fa-desktop'],
-            ['name' => 'SIMETRI', 'url' => 'http://192.168.1.147/e-ptsp', 'icon' => 'fa-display'],
+            ['name' => 'SIMETRI', 'url' => 'http://192.168.1.147/simetri', 'icon' => 'fa-file'],
             ['name' => 'KOMDANAS', 'url' => 'https://komdanas.mahkamahagung.go.id/', 'icon' => 'fa-database'],
             ['name' => 'E-Court', 'url' => 'https://ecourt.mahkamahagung.go.id/Login', 'icon' => 'fa-gavel'],
             ['name' => 'E-Berpadu', 'url' => 'https://eberpadu.mahkamahagung.go.id/', 'icon' => 'fa-users'],
