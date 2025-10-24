@@ -53,7 +53,7 @@
             ['name' => 'SIPP 6.0.0', 'url' => 'http://192.168.1.147/SIPP330', 'icon' => 'fa-scale-balanced'],
             ['name' => 'MIS 6.0.0', 'url' => 'http://192.168.1.147/mis', 'icon' => 'fa-chart-pie'],
             ['name' => 'EIS Badilum', 'url' => 'https://evaluasi.badilum.mahkamahagung.go.id/', 'icon' => 'fa-chart-line'],
-            ['name' => 'PTSP+ Lama', 'url' => 'http://192.168.1.147/ptsp', 'icon' => 'fa-desktop'],
+            ['name' => 'PTSP+', 'url' => 'http://192.168.1.147/ptsp', 'icon' => 'fa-desktop'],
             ['name' => 'SIMETRI', 'url' => 'http://192.168.1.147/simetri', 'icon' => 'fa-file'],
             ['name' => 'KOMDANAS', 'url' => 'https://komdanas.mahkamahagung.go.id/', 'icon' => 'fa-database'],
             ['name' => 'E-Court', 'url' => 'https://ecourt.mahkamahagung.go.id/Login', 'icon' => 'fa-gavel'],
@@ -205,7 +205,7 @@
 
                 <div class="row">
                     <div class="col-12 text-center">
-                        <p class="text-muted mt-5 mb-0">Terakhir diperbarui: 20 Oktober 2025 08:40 WIB</p>
+                        <p class="text-muted mt-5 mb-0">Terakhir diperbarui: 24 Oktober 2025 10:40 WIB</p>
                     </div>
                     <div class="alert alert-warning mt-3" role="alert">
                         <p class="mb-0 text-center">
@@ -221,7 +221,7 @@
 
         <footer class="py-3">
             <div class="container text-center">
-                Made with <i class="fas fa-heart text-danger"></i> by Qori Chairawan, S.Kom
+                Made by Qori Chairawan, S.Kom
             </div>
         </footer>
     </div><!-- .page-wrapper -->
