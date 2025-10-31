@@ -107,6 +107,20 @@
                     Pengadilan Negeri Lubuk Pakam
                 </p>
 
+                <?php
+                if (date('d') == 29 || date('d') == 30 || date('d') == 31) {
+                ?>
+                    <div class="alert alert-warning mt-3" role="alert">
+                        <p class="mb-0 text-center">
+                            <i class="fas fa-info-circle me-2"></i>
+                            <strong>Pengingat: Jangan lupa untuk mengumpulkan laporan PKP (Penilaian Kinerja Pegawai)</strong>
+                        </p>
+                    </div>
+                <?php
+                }
+                ?>
+
+
                 <!-- Bagian Statistik EIS -->
                 <?php if ($eisData['status'] == 1) : ?>
                     <!-- Peringkat & Capaian -->
