@@ -219,7 +219,7 @@
 
                 <div class="row">
                     <div class="col-12 text-center">
-                        <p class="text-muted mt-5 mb-0">Terakhir diperbarui: 24 Oktober 2025 10:40 WIB</p>
+                        <p class="text-muted mt-5 mb-0">Terakhir diperbarui: 31 Oktober 2025 10:15 WIB</p>
                     </div>
                     <div class="alert alert-warning mt-3" role="alert">
                         <p class="mb-0 text-center">
